@@ -15,10 +15,16 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth; /* Smooth in-page navigation for landing page */
   }
 
   body {
     @apply antialiased;
+  }
+
+  /* Ensure anchored sections account for fixed navbar height */
+  section[id] {
+    scroll-margin-top: 84px; /* ~h-16 navbar + spacing */
   }
 }
 
